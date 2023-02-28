@@ -1,0 +1,240 @@
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width:500px) {
+    .container {
+        padding: 0 16px;
+    }
+}
+
+body {
+    font-family: Balsamiq Sans;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid buttonface;
+
+}
+
+.logo img{
+    max-width: 120px;
+
+    }
+.logo {
+    margin: 20px 0;
+}   
+
+.btn__add,
+.btn__popup__close
+
+ {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    background-color: buttonface;
+    color: rgb(255, 0, 149);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+   
+
+}
+
+.btn__add:hover {
+    background-color: rgb(255, 0, 149);
+    color: white;
+
+}
+
+.section {
+    margin: 50px 0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 20px;
+    align-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 20px;
+    transition: color 0.5s ease;
+
+}
+
+.card:hover {
+    border-color:  rgb(255, 0, 149);
+}
+
+.card img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-bottom: 1px solid black;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    
+
+}
+
+a.card__link {
+    text-decoration: none;
+    color: black;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 32px;
+    margin: 10px;
+}
+
+.card__like {
+    margin: 0 10px 10px 10px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 10px;
+    color:white;
+    transition: background-color 0.3s ease;
+}
+.liked {
+    color: rgb(255, 0, 149);    
+}
+
+.card__like:hover {
+    background-color: rgb(255, 0, 149);
+    color: white;
+
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid buttonface;
+}
+.socials {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.socials__link {
+    font-size: 32px;
+    padding-right: 10px;
+    color: black;
+    transition: color 0.3s ease;
+
+}
+
+.socials__link:hover {
+    color: rgb(255, 0, 149); 
+    
+}
+
+.popup {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1;
+    background-color:  rgba(0, 0, 0, 0.5);
+    
+}
+
+
+.popup__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 320px;
+    padding: 20px;
+    background-color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn__popup__close {
+    margin-left: 270px;
+    cursor: pointer;
+}
+
+
+input,
+textarea,
+.form__btn
+ {
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 16px;
+    padding: 10px 10px;
+    font-family: Balsamiq Sans;
+}
+
+.form__btn {
+    background-color: rgb(255, 0, 149);
+    color: white;
+}
+
+.form__fake-checkbox {
+    color: rgb(255, 0, 149);
+    font-size: 32px;
+    transition: background-color 0.3s ease;
+}
+
+.form__checkbox  {
+    width: 32px;
+    height: 32px;
+    color: 1px solid black;
+    border: 4px;
+}
+
+
+.form__checkbox-wrap {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+}
+
+.form__input:focus {
+    border: 1px solid rgb(255, 0, 149);
+}
+
+.hidden {
+    display: none;
+}

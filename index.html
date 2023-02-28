@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошачье приложение</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3e2b3d0dcf.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo"><img src="img/cute-cat.png" alt=""></div>
+            <button class="btn__add" id="add"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="cards section">
+
+
+        </div>
+        <footer class="footer">
+            <span class="copyright">©2023 Made by Me</span>
+            <div class="socials">
+                <a class="socials__link" href="#"><i class="fa-brands fa-github socials__icon"></i></a>
+                <a class="socials__link" href="#"><i class="fa-brands fa-vk socials__icon"></i></a>
+                <a class="socials__link" href="#"><i class="fa-brands fa-telegram socials__icon"></i></a>
+            </div>
+
+        </footer>
+    </div>
+    <template id="cardtemplate">
+        <div class="card">
+            <img src="#" alt="Изабражение" class="card__image">
+            <a href="#" class="card__link">
+                <h2 class="card__name"></h2>
+            </a>
+            <button class="card__like" aria-label="Поставить лайк"><i class="fa-solid fa-heart fa-2x"></i></button>
+            <div class="data hidden">
+        </div>
+    </template>
+    <div class="popup popup-add hidden">
+        <div class="popup__container animate__animated animate__zoomIn">
+            <button class="btn__popup__close"><i class="fa-solid fa-xmark"></i></button>
+            <h2>Добавить питомца</h2>
+            <form class="form" id="popup-form-add">
+                <div class="form__image"></div>
+                <input type="number" class="form__input" name="id" min="1" placeholder="id">
+                <input type="number" class="form__input" name="age" placeholder="Возраст">
+                <input type="text" class="form__input" name="name" placeholder="Имя">
+                <input type="number" class="form__input" name="rate" placeholder="Рейтинг (0-10)" min="0" max="10">
+                <textarea name="description" class="form__input form__textarea" placeholder="Описание"></textarea>
+                <label class="form__checkbox-wrap">
+                    <input type="checkbox" name="favorite" class="form__checkbox" placeholder="">
+                    <span class="form__label">Любимчик</span>
+                    <span class="form__fake-checkbox"><i class="fa-regular fa-circle-check"></i></span>
+                </label>
+                <input type="url" class="form__input" name="image" placeholder="Ссылка на фото">
+                <button type="submit" class="form__btn btn">Добавить котика</button>
+            </form>
+        </div>
+
+    </div>
+
+    <template id="catsinfotemplate">
+        <div class="temlate__wrapper">
+            <div class="cat-info">
+                <button class="cat-info__edited">Редактировать</button>
+                <button class="cat-info__saved cat-info__saved__hidden">Сохранить</button>
+                <button class="cat-info__deleted">Удалить</button>
+                <img src="#" class="cat-info__image" loading="lazy">
+                <span class="cat-info__id"></span>
+                <div class="cat-info__title">
+                    <h2 class="cat-info__name"></h2>
+                    <button class="cat-info__favorite"><i class="fa-solid fa-heart fa-2x"></i></button>
+                </div>
+                <span class="cat-info__rate"></span>
+                <div class="cat-info__age">
+                    <span class="cat-info__age-val"></span>
+                    <span class="cat-info__age-next"></span>
+                </div>
+                <p class="cat-info__desc"></p>
+            </div>
+        </div>
+    </template>
+
+
+
+    <div class="popup popup-cat-info hidden">
+        <div class="popup__container animate__animated animate__zoomIn">
+            <button class="btn__popup__close_external"><i class="fa-solid fa-xmark"></i></button>
+            <div class="popup__content"></div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="js/cats.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/catcard.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
