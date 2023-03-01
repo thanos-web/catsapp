@@ -61,3 +61,4 @@ const cats = [
         "image": "https://cats.petiteweb.dev/strong/images/c13.png"
     }
 ]
+

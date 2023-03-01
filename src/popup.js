@@ -1,11 +1,11 @@
 const popup = document.querySelector(".popup");
-const btnadd = document.querySelector(".btn__add");
-const btnpopupclose = document.querySelector(".btn__popup__close");
+const btnAdd = document.querySelector(".btn__add");
+const btnPopupClose = document.querySelector(".btn__popup__close");
 
-btnadd.addEventListener("click", () => popup.classList.remove("hidden"));
-btnpopupclose.addEventListener("click", () => popup.classList.add("hidden"))
+btnAdd.addEventListener("click", () => popup.classList.remove("hidden"));
+btnPopupClose.addEventListener("click", () => popup.classList.add("hidden"))
 
-const formpopupadd = document.querySelector("#popup-form-add")
+const formPopupAddCat = document.querySelector("#popup-form-add")
 
 function serializeForm(elements) {
     const catData = {};
@@ -23,21 +23,19 @@ function serializeForm(elements) {
             }
         }
     });
-    console.log(catData)
     return catData;
 }
 
 function FormSubmit(event) {
     event.preventDefault();
-    console.log(formpopupadd.elements)
-    const formData = serializeForm((Array.from(formpopupadd.elements)));
+    const formData = serializeForm((Array.from(formPopupAddCat.elements)));
     const newCard = new Catcard(formData);
     newCard.prependCard(document.querySelector(".cards"));
 
     popup.classList.add("hidden"); // спрятать форму
     event.target.reset(); //очистить данные формы
 }
-formpopupadd.addEventListener("submit", FormSubmit)
+formPopupAddCat.addEventListener("submit", FormSubmit)
 
 
 
