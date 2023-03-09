@@ -18,8 +18,10 @@
     <div class="container">
         <div class="header">
             <div class="logo"><img src="img/cute-cat.png" alt=""></div>
-            <button class="btn__add" id="add"><i class="fa-solid fa-plus"></i></button>
-        </div>
+            <div class="wrapper__header"> 
+                <button class="btn__add" id="add"><i class="fa-solid fa-plus"></i></button>
+                <button class="login__btn">Вход</button></div>
+            </div>
         <div class="cards section">
 
 
@@ -37,7 +39,7 @@
     <template id="cardtemplate">
         <div class="card">
             <img src="#" alt="Изабражение" class="card__image">
-            <a href="#" class="card__link">
+            <a href="javascript:void(0)" class="card__link">
                 <h2 class="card__name"></h2>
             </a>
             <button class="card__like" aria-label="Поставить лайк"><i class="fa-solid fa-heart fa-2x"></i></button>
@@ -70,21 +72,20 @@
     <template id="catsinfotemplate">
         <div class="temlate__wrapper">
             <div class="cat-info">
-                <button class="cat-info__edited">Редактировать</button>
-                <button class="cat-info__saved cat-info__saved__hidden">Сохранить</button>
-                <button class="cat-info__deleted">Удалить</button>
                 <img src="#" class="cat-info__image" loading="lazy">
-                <span class="cat-info__id"></span>
                 <div class="cat-info__title">
+                    <span class="cat-info__id"></span>
                     <h2 class="cat-info__name"></h2>
                     <button class="cat-info__favorite"><i class="fa-solid fa-heart fa-2x"></i></button>
                 </div>
-                <span class="cat-info__rate"></span>
-                <div class="cat-info__age">
-                    <span class="cat-info__age-val"></span>
-                    <span class="cat-info__age-next"></span>
-                </div>
+                <span class="cat-info__rate"> </span>
+                <div class="cat-info__age">Возраст</div>
                 <p class="cat-info__desc"></p>
+                <div class="buttons">
+                    <!-- <button class="cat-info__edited">Редактировать</button> -->
+                    <!-- <button class="cat-info__saved cat-info__saved__hidden">Сохранить</button> -->
+                    <button class="cat-info__deleted">Удалить</button>
+                </div>
             </div>
         </div>
     </template>
@@ -98,11 +99,12 @@
         </div>
 
     </div>
-
+    <script src="src/api.js"></script>
     <script src="src/cats.js"></script>
     <script src="src/catcard.js"></script>
     <script src="src/popup.js"></script>
     <script src="src/index.js"></script>
+    <script src="src/cookies.js"></script>
 
 </body>
 

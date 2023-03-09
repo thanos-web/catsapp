@@ -29,6 +29,23 @@ body {
 
 }
 
+.wrapper__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+}
+
+.login__btn {
+    background-color:black;
+    color:  white;
+    border-radius: 10px;
+    padding: 12px 8px;
+    width: 80px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
 .logo img{
     max-width: 120px;
 
@@ -38,7 +55,8 @@ body {
 }   
 
 .btn__add,
-.btn__popup__close
+.btn__popup__close,
+.btn__popup__close_external
 
  {
     display: flex;
@@ -85,8 +103,8 @@ body {
 
 }
 
-.card:hover {
-    border-color:  rgb(255, 0, 149);
+.card__name:hover {
+    color:  rgb(255, 0, 149);
 }
 
 .card img {
@@ -111,7 +129,9 @@ h2 {
     margin: 10px;
 }
 
-.card__like {
+.card__like,
+.cat-info__favorite
+ {
     margin: 0 10px 10px 10px;
     width: 44px;
     height: 44px;
@@ -188,7 +208,9 @@ form {
     gap: 20px;
 }
 
-.btn__popup__close {
+.btn__popup__close,
+.btn__popup__close_external
+ {
     margin-left: 270px;
     cursor: pointer;
 }
@@ -237,4 +259,81 @@ textarea,
 
 .hidden {
     display: none;
+}
+
+.cat-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cat-info__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cat-info__image {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    padding-top: 0px;
+    margin-top: 10px;
+}
+
+.cat-info__desc,
+.cat-info__age,
+.cat-info__rate
+ {
+    color: rgb(105, 105, 105);
+    background-color:rgb(247, 246, 246);
+    padding:15px 0;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.cat-info__desc {
+    margin: 0;
+}
+
+
+.cat-info__name,
+.cat-info__favorite
+  {
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+    
+    
+}
+
+.cat-info__edited,
+.cat-info__saved,
+.cat-info__deleted
+ {
+    
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 12px 8px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.cat-info__edited:hover,
+.cat-info__saved:hover,
+.cat-info__deleted:hover,
+.login__btn:hover
+ {
+    
+    color: white;
+    background-color:rgb(255, 0, 149);
+    border: 1px solid  black;
+    
 }

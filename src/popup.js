@@ -29,14 +29,20 @@ function serializeForm(elements) {
 function FormSubmit(event) {
     event.preventDefault();
     const formData = serializeForm((Array.from(formPopupAddCat.elements)));
-    const newCard = new Catcard(formData);
-    newCard.prependCard(document.querySelector(".cards"));
 
-    popup.classList.add("hidden"); // спрятать форму
-    event.target.reset(); //очистить данные формы
+    api.addNewCat(formData)
+        .then(response => response.json())
+        .then(function (data) {
+            const newCard = new Catcard(formData);
+            newCard.setEventsListener()
+            newCard.prependCard(document.querySelector(".cards"));
+
+            popup.classList.add("hidden"); // спрятать форму
+            event.target.reset(); //очистить данные формы
+        })
+
 }
 formPopupAddCat.addEventListener("submit", FormSubmit)
-
 
 
 
