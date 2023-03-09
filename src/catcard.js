@@ -52,7 +52,6 @@ class Catcard { // данный класс Catcard отвечает за соз�
                 if (isCookieExist('Login')) {
                     CatInfoCard.querySelector(".cat-info__deleted").addEventListener("click", (event) => this2.deleteCard(data.id));
                 } else {
-                    console.log('no')
                     CatInfoCard.querySelector(".cat-info__deleted").classList.add("hidden")
                     CatInfoCard.querySelector(".buttons").innerHTML = "<span>Нужно войти чтобы удалить кота</span>"
                 }
